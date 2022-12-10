@@ -1,0 +1,94 @@
+{
+   "action": {
+      "default_icon": {
+         "128": "icons/icon128.png",
+         "16": "icons/icon16.png",
+         "300": "icons/icon300.png",
+         "48": "icons/icon48.png"
+      },
+      "default_popup": "html/popup.html",
+      "default_title": "__MSG_extName__"
+   },
+   "author": "ad blocker turbo",
+   "background": {
+      "service_worker": "js/background.js"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "js/content.js" ],
+      "match_about_blank": true,
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "declarative_net_request": {
+      "rule_resources": [ {
+         "enabled": false,
+         "id": "ruleset_1",
+         "path": "filters/declarative/filter_1.json"
+      }, {
+         "enabled": false,
+         "id": "ruleset_13",
+         "path": "filters/declarative/filter_13.json"
+      }, {
+         "enabled": true,
+         "id": "ruleset_14",
+         "path": "filters/declarative/filter_14.json"
+      }, {
+         "enabled": false,
+         "id": "ruleset_16",
+         "path": "filters/declarative/filter_16.json"
+      }, {
+         "enabled": true,
+         "id": "ruleset_2",
+         "path": "filters/declarative/filter_2.json"
+      }, {
+         "enabled": false,
+         "id": "ruleset_224",
+         "path": "filters/declarative/filter_224.json"
+      }, {
+         "enabled": true,
+         "id": "ruleset_3",
+         "path": "filters/declarative/filter_3.json"
+      }, {
+         "enabled": false,
+         "id": "ruleset_4",
+         "path": "filters/declarative/filter_4.json"
+      }, {
+         "enabled": false,
+         "id": "ruleset_6",
+         "path": "filters/declarative/filter_6.json"
+      }, {
+         "enabled": false,
+         "id": "ruleset_7",
+         "path": "filters/declarative/filter_7.json"
+      }, {
+         "enabled": false,
+         "id": "ruleset_8",
+         "path": "filters/declarative/filter_8.json"
+      }, {
+         "enabled": false,
+         "id": "ruleset_9",
+         "path": "filters/declarative/filter_9.json"
+      } ]
+   },
+   "default_locale": "en",
+   "description": "__MSG_extShortDesc__",
+   "host_permissions": [ "\u003Call_urls>" ],
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "300": "icons/icon300.png",
+      "48": "icons/icon48.png"
+   },
+   "incognito": "split",
+   "manifest_version": 3,
+   "minimum_chrome_version": "101.0",
+   "name": "__MSG_extName__",
+   "permissions": [ "alarms", "scripting", "storage", "unlimitedStorage", "webNavigation", "declarativeNetRequest" ],
+   "version": "0.1.6",
+   "web_accessible_resources": [ {
+      "matches": [ "http://*/*", "https://*/*" ],
+      "resources": [ "web-accessible-resources/*" ],
+      "use_dynamic_url": true
+   } ]
+}
