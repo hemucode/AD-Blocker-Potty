@@ -89,7 +89,7 @@
    },
    "manifest_version": 3,
    "name": "__MSG_extName__",
-   "permissions": [ "declarativeNetRequest", "declarativeNetRequestFeedback", "storage", "scripting", "webNavigation", "tabs"],
+   "permissions": [ "declarativeNetRequest", "declarativeNetRequestFeedback", "storage", "tabs"],
    "short_name": "ad blocker",
    "version": "1.0.5"
 }

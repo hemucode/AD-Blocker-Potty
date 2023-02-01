@@ -45,7 +45,7 @@ chrome.runtime.onMessage.addListener(async (request, sender) => {
 chrome.runtime.onMessage.addListener(function(m, s, c){
   if (m.blockedCount) { 
     n = m.blockedCount; 
-    chrome.action.setBadgeBackgroundColor({ color: 'white' });
+    chrome.action.setBadgeBackgroundColor({ color: '#f89722' });
     chrome.action.setBadgeText({text: m.blockedCount.toString(), tabId: s.tab.id});
   }
 })
@@ -59,7 +59,7 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab){
     chrome.declarativeNetRequest.onRuleMatchedDebug.addListener(function (o) {
       if (n>9999) {n = 0}
       console.log('rule matched:', o);
-      chrome.action.setBadgeBackgroundColor({ color: 'white' });
+      chrome.action.setBadgeBackgroundColor({ color: '#f89722' });
       chrome.action.setBadgeText({text: n.toString()});
       ++n
     })

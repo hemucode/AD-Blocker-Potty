@@ -42,6 +42,7 @@ async function init() {
     head.appendChild(css);
     css.type = 'text/css';
     css.innerText = `
+    
         /* Hide by Element */
         ytd-promoted-video-renderer,
         ytd-movie-offer-module-renderer,
