@@ -145,8 +145,6 @@ async function init() {
     // is beeing run in the main context of the page.
     setInterval(()=>{
         const btn=document.querySelector(".ytp-ad-skip-button");
-        const btn2=document.querySelector("#confirm-button");
-        if(btn2) {btn2.click();}
         if( ! document.querySelector('.ad-showing') ) return
               const video=document.querySelector('video')
               if( ! video)  return

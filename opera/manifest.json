@@ -91,5 +91,5 @@
    "name": "__MSG_extName__",
    "permissions": [ "declarativeNetRequest", "declarativeNetRequestFeedback", "storage", "scripting", "webNavigation", "tabs"],
    "short_name": "ad blocker",
-   "version": "1.0.5"
+   "version": "1.0.6"
 }
